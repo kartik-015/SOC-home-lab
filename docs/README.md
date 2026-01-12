@@ -1,8 +1,48 @@
-# SOC Home Lab Documentation
+# 🔒 SOC Home Lab - Wazuh SIEM Implementation
 
-This directory contains detailed documentation for each phase of the SOC home lab project.
+A fully functional Security Operations Center (SOC) home lab featuring Wazuh SIEM for real-time threat detection, log analysis, and incident response.
 
-## Documentation Index
+## 🚀 Quick Links
+
+- **[📖 Full Project Documentation](PROJECT-DOCUMENTATION.md)** - Complete technical details
+- **[🔧 Replication Guide](REPLICATION-GUIDE.md)** - Build this lab yourself (step-by-step)
+- **[💼 LinkedIn Post Templates](LINKEDIN-POST-GUIDE.md)** - Share your project professionally
+
+## 🎯 What This Lab Does
+
+✅ **Real-time threat detection** with Wazuh SIEM 4.14.1  
+✅ **Enhanced Windows telemetry** using Sysmon 15.15  
+✅ **Attack simulation** and validation (100% detection rate)  
+✅ **MITRE ATT&CK mapping** (T1059.001, T1087, T1082)  
+✅ **Multi-system monitoring** (Ubuntu + Windows + Kali)
+
+## 🛠️ Tech Stack
+
+`Wazuh SIEM` • `Sysmon` • `Ubuntu Server 24.04` • `VMware` • `OpenSearch` • `Kali Linux` • `PowerShell`
+
+## 📊 Results
+
+- **Detection Rate:** 100% on simulated attacks
+- **Events Logged:** 34+ Sysmon events in 24 hours
+- **High-Severity Alerts:** 8 critical alerts (Level ≥10)
+- **Response Time:** Real-time (<2 minutes)
+
+## 🎓 Skills Demonstrated
+
+SIEM Configuration • Log Analysis • Threat Detection • Incident Response • MITRE ATT&CK • Agent Management • Sysmon Integration • Network Architecture
+
+
+## 🏗️ Architecture
+
+Windows 11 Host (192.168.137.1)
+├── Ubuntu Server 24.04 (192.168.137.10) - Wazuh SIEM
+│ ├── Wazuh Manager
+│ ├── OpenSearch Indexer
+│ └── Web Dashboard
+├── Windows 10 Pro (192.168.137.20) - Monitored Endpoint
+│ ├── Wazuh Agent 4.8.0
+│ └── Sysmon 15.15
+└── Kali Linux (192.168.137.30) - Attack Simulation
 
 1. **[Phase 1: SOC Architecture Design](phase1-architecture.md)**
    - Architecture diagrams (ASCII + Mermaid)
@@ -56,10 +96,24 @@ This directory contains detailed documentation for each phase of the SOC home la
 
 ---
 
+
+## 🚀 Want to Build This Yourself?
+
+Check out the **[Replication Guide](REPLICATION-GUIDE.md)** for complete step-by-step instructions!
+
+**Prerequisites:** 16GB RAM, 100GB disk, VMware Workstation
+
+**Time Required:** 3-5 hours initial setup
+
+
+⭐ **Star this repo if you found it helpful!**
+
+
 ## Quick Reference
 
 - **Main README**: [../README.md](../README.md)
 - **Configs**: [../configs/](../configs/)
 - **Scripts**: [../scripts/](../scripts/)
 - **Playbooks**: [../playbooks/](../playbooks/)
+
 
